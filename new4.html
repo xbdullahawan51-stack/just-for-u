@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Friend Memories Slideshow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 50px;
+            box-sizing: border-box;
+            color: white;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .slide.active {
+            display: block;
+        }
+        .slide1 { 
+            background: linear-gradient(135deg, #ff6b9d, #c44569); 
+            background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .slide2 { 
+            background: linear-gradient(135deg, #74b9ff, #0984e3); 
+            
+            background-size: cover; 
+            background-position: center; 
+        }
+        .slide3 { 
+            background: linear-gradient(135deg, #00b894, #00cec9); 
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .slide4 { 
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0); 
+            color: #2d3436; 
+            background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .slide5 { 
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7); 
+        
+            background-size: cover; 
+            background-position: center; 
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background: linear-gradient(45deg, #ff6b9d, #4ecdc4);
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #4ecdc4, #ff6b9d);
+        }
+        .emoji {
+            font-size: 2em;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide slide1 active">
+        <h1>Welcome <span class="emoji">🌸</span></h1>
+        <p><span class="emoji">💖</span> HELLOW MYY CUTIEE PIEE,<br>"I just want to take a moment to thank you for being with me these past two years in school. Having you by my side has been one of the most beautiful parts of my life. Together we’ve created so many unforgettable memories — from the laughter that echoed in the hallways, to the little adventures that only we will ever truly understand. Every day with you felt brighter, every moment more meaningful, and even the simplest things became special because you were there. You’ve given me joy, comfort, and countless reasons to smile, and I’ll always treasure the bond we’ve built. These two years weren’t just about school; they were about us, about the fun we had, the love we shared, and the way you made everything feel magical. Thank you for staying with me, for making me feel seen and cared for, and for turning ordinary days into memories I’ll carry forever.ap ka bag chupana ,childaren day par sirf ap ko hi dhekty rehna , ap sa ulti ulti baatien karna , ap sa haar cheez share karna , duty ka bhanane pura school ghumna, classes bunk karna, mis nelam ka office jana, sir naveed sa jhoot keh kar bach jana , ayehsa ka sath mill kar ap ka mazak urana , ap ko girta hoa dhekna,farewell par ap ka sathh ghumna ap ka sath pics lena ap sa baatien karna bahee best day tha merii life ka , aur 14 agust par school mai habiba ka sath teamup kar ka ap ko tang karna, sath mill kar bhand karna , ap ka sath mazak karna , aurr bhii bhoutt kuchhh yaarrrr bhout cheezenn haii jo hum na sath mai karii haii . Aur agar sachh bataun yehh merii life ka best years haii yaar in ko zindagi bhar nahi bhool sakta maii aur na hi bhol sakunga khabi." <span class="emoji">😊❤️</span></p>
+        <div class="nav">
+            <button onclick="nextSlide()">Next <span class="emoji">➡️</span></button>
+        </div>
+    </div>
+    <div class="slide slide2">
+        <h1>The Beginning <span class="emoji">🌟</span></h1>
+        <p><span class="emoji">🤝</span> Remember when we first met? That day changed everything. jaab hum pheli baar mille thy hum , aur hume koi idea bhi nahii tha ka hum dono itne achy dost ban jayenge aur ek dusre ka kareeb hojayege. aur mujhe koi idea nahi tha ek ghaadi merii dost banegi likin jo bhii bolo mai ajj taak itne achy insaan nahii nahi milla hunga u are thee besttt merii sualihaa jeeeeeee, and i am very lucky to have u in my life and all that , Jaab hamari baat shuru hoi thi mujhe lagta tha ka mai ap ka friend nahi ban sakta but mai na haar nahi maani maii haar kisam ki koshish karta raha aur akhir mai ap ka acha wala dost ban hi gaya.. aur mai dua karta hun ka hum hamesha sath rahien INSHALLAH . <span class="emoji">🙏✨</span></p>
+        <div class="nav">
+            <button onclick="prevSlide()"><span class="emoji">⬅️</span> Prev</button>
+            <button onclick="nextSlide()">Next <span class="emoji">➡️</span></button>
+        </div>
+    </div>
+    <div class="slide slide3">
+        <h1>Shared Adventures <span class="emoji">🏞️</span></h1>
+        <p><span class="emoji">🌍</span> From late-night talks to spontaneous trips, we've created countless memories.Supporting each other through thick and thin. You're my rock, my confidant, my everything everyy single thing."I can never thank you enough for everything you’ve done for me over these past two years. You’ve been my strength when I was weak, my happiness when I felt low, and my closest companion through every moment of school life. Every little thing you did — whether it was cheering me up, standing by me when I needed support, or simply being there with your smile — meant more than words can ever express. You gave me memories that I’ll carry forever, and you showed me what it truly means to be cared for and loved. I’m endlessly grateful for your patience, your kindness, and the way you made even ordinary days feel magical. Thank you for giving me your time, your love, and your heart — for making me feel special in ways I never thought possible. These two years with you have been the most unforgettable chapter of my life, and I’ll always treasure everything you’ve done for me." <span class="emoji">💪😍</span></p>
+        <div class="nav">
+            <button onclick="prevSlide()"><span class="emoji">⬅️</span> Prev</button>
+            <button onclick="nextSlide()">Next <span class="emoji">➡️</span></button>
+        </div>
+    </div>
+    <div class="slide slide4">
+        <h1>Beautiful Moments <span class="emoji">🌈</span></h1>
+        <p><span class="emoji">😄</span>
+*"You was the light that brightened my school days, and Your smile always made me feel at home.You stayed by my side when no one else did,Your laughter is the sweetest sound I knew.You gave me courage when I felt weak, and Your kindness touched my heart deeply. You made ordinary days feel magical, and Your presence is my comfort.You believed in me when I doubted myself, and You turned silence into peace. Your eyes carried warmth I’ll never forget, and You shared her time with me selflessly.You made me laugh until my worries disappeared, and Your patience taught me love.You stood with me through challenges, and Your words healed my sadness.You gave me unforgettable memories, and our friendship became my treasure.You made me feel seen, and Your care is constant and true.You gave me hope in hard times, and Your presence was my safe place.you made me believe in happiness, and your love is gentle yet strong. You gave me countless reasons to smile, and Your support lifted me higher.You made me proud to be myself.You gave me joy every day, and your voice calmed my storms.You made me laugh at little things, and Your kindness never faded.You gave me strength to keep going, and Your love is my anchor. You made me cherish life, and Your presence is priceless.You gave me unforgettable adventures, and Your heart is pure.You made me feel special, and your care is endless. You gave me trust, and Your smile is my sunshine.You made me dream bigger, and my love is unconditional for u.You gave me comfort in pain, and your laughter is contagious. You made me fearless, and your soul is beautiful. You gave me peace, and your presence is a gift. You made me stronger, and Your kindness is rare. You gave me happiness, and her love was true.You made me grateful, and your patience is endless. You gave me courage, and your smile healed me.You made me believe in love, and your care is deep.You gave me joy in small things, and your presence is constant.You made me laugh every day. You gave me unforgettable school years, and ik your friendship is loyal. You made me feel alive, and your  kindness is inspiring. You gave me hope for tomorrow. We made me cherish memories together, and your presence is irreplaceable. You gave me light in darkness, and your smile is unforgettable. You made me proud , and your laughter is my joy. You gave me comfort in silence. She made me believe in forever, and your care is gentle. You gave me happiness in every moment, and her presence was my blessing. She made me thankful, and her kindness was endless. She gave me unforgettable fun, and her love was pure.You made me smile endlessly, andd muchh moree yaar yeh bhi enough nahii haii..
+
+<span class="emoji">🎉💕</span></p>
+        <div class="nav">
+            <button onclick="prevSlide()"><span class="emoji">⬅️</span> Prev</button>
+            <button onclick="nextSlide()">Next <span class="emoji">➡️</span></button>
+        </div>
+    </div>
+    <div class="slide slide5">
+        <h1>Forever Grateful <span class="emoji">🙌</span></h1>
+        <p><span class="emoji">🌹</span> To my best friend: Thank you for all the memories, the laughs, the tears, and the growth. You're a beautiful soul, and I'm so lucky to have you. Here's to many more adventures together!"I want to thank you with all my heart for everything you’ve done for me. You’ve given me love, care, and countless memories that I will treasure forever, and you’ve stood by me even when I wasn’t perfect. I know there were times when I hurt you by mistake, and yet you chose to forgive me, to understand me, and to stay by my side. That forgiveness showed me the depth of your love and the beauty of your heart. You’ve been my strength, my happiness, and my safe place, and I’ll always be grateful for the patience, kindness, and endless support you’ve given me. Thank you for making me feel special, for turning ordinary days into unforgettable ones, and for loving me even when I stumbled. You are my greatest blessing, and I’ll never stop cherishing the love and forgiveness you’ve given me." <span class="emoji">🥰🌟</span></p>
+        <div class="nav">
+            <button onclick="prevSlide()"><span class="emoji">⬅️</span> Prev</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+    </script>
+</body>
+</html>
